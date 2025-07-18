@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Explore here!</h1>
+    </header>
+
+   <main class="explore-hero fade-in">
+    <div class="explore-content">
+        <h2 class="fade-in fade-delay-1">We're here for you 💙</h2>
+        <p class="fade-in fade-delay-2">Choose a feature that brings you peace, comfort, or strength.</p>
+        <div class="explore-buttons fade-in fade-delay-3">
+            <a href="virtual-hugs.html">Get a Hug</a>
+            <a href="story.html">Read Stories</a>
+            <a href="about-us.html">Know Us</a>
+        </div>
+
+        <div id="quote-section" class="fade-in fade-delay-3">
+            <p><em>Loading motivation...</em></p>
+        </div>
+
+    </div>
+</main>
+
+
+    <footer>
+        <p>&copy; 2025 Mental Health Support. All Rights Reserved.</p>
+    </footer>
+    <script>
+  async function loadQuote() {
+    const quoteEl = document.getElementById("quote-section");
+    try {
+      const response = await fetch("https://api.quotable.io/random?tags=life|inspirational|encouragement");
+      const data = await response.json();
+      quoteEl.innerHTML = `<p>"${data.content}"<br><strong>— ${data.author}</strong></p>`;
+    } catch (error) {
+      quoteEl.innerHTML = `<p>Stay strong. You’ve got this. 💙</p>`;
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadQuote);
+</script>
+
+
+
+</body>
+</html>

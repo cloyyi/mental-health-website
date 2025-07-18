@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Story</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Story</h1>
+    <nav class="nav-buttons">
+    <a href="college.html" class="nav-btn">Home</a>
+    <a href="form.html" class="nav-btn">Explore Here</a>
+    <a href="about-us.html" class="nav-btn">About Us</a>
+</nav>
+
+  </header>
+
+  <main>
+    <section class="story-content">
+      <h2>How I Overcame Anxiety</h2>
+      <p>
+        Hi, I'm Anshika. This is my personal story about mental health.
+        I have experienced anxiety at different stages of life. It was overwhelming, confusing, and at times isolating. But with time, support, and self-care, I started healing.
+      </p>
+      <p>
+        I began practicing mindfulness, journaling, and doing things I love like dancing and drawing. These little things helped me express myself and feel more at peace.
+      </p>
+      <p>
+        My father also battled depression. It was tough seeing him go through it, but it made me more empathetic. We stood by him, encouraged therapy, and slowly saw improvement. It taught me that healing takes time and love.
+      </p>
+      <p>
+        This website was born from that journey — to remind others that they’re not alone. Whether it's anxiety, stress, or emotional struggles — a small act of kindness, like a virtual hug or a shared story, can mean everything.
+      </p>
+     
+    </section>
+
+    <section class="user-story">
+      <h2>Share Your Story</h2>
+      <form id="storyForm">
+        <textarea id="userStory" placeholder="Write your story here..." required></textarea><br>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="submissionStatus" style="color: green; font-weight: bold;"></p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("storyForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const story = document.getElementById("userStory").value.trim();
+      if (story) {
+        // Simulate submission (you can later connect this to a backend)
+        document.getElementById("submissionStatus").textContent = "Thank you for sharing your story!";
+        document.getElementById("userStory").value = "";
+      } else {
+        document.getElementById("submissionStatus").textContent = "Please write something before submitting.";
+      }
+    });
+  </script>
+</body>
+</html>
+

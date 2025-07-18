@@ -1,0 +1,363 @@
+/* ---------- FONT IMPORT ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* ---------- GENERAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+  background: #f7f9fc;
+  color: #1f2d3d;
+  line-height: 1.8;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: #0d47a1;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffeb3b;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 20px;
+  margin: 20px;
+  background: #e3f2fd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #0d47a1;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #1976d2;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #0d47a1;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #0d47a1;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* ---------- FORM ELEMENTS ---------- */
+form input,
+form textarea,
+form button {
+  font: inherit;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #90caf9;
+  border-radius: 5px;
+  width: 100%;
+}
+
+form button,
+input[type="submit"] {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover,
+input[type="submit"]:hover {
+  background: #0d47a1;
+}
+
+/* ---------- STORY BOX ---------- */
+.story {
+  background: #fff;
+  border-left: 5px solid #64b5f6;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+/* ---------- HUG COMMON ---------- */
+.hug-options {
+  margin-bottom: 30px;
+}
+
+.hug-options button {
+  margin: 0 10px;
+  padding: 12px 24px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hug-options button:hover {
+  background: #0d47a1;
+  transform: translateY(-2px);
+}
+
+.hug-image-container img {
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.hug-image-container img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- LANDING PAGE (college.html) ---------- */
+.landing-hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+  color: #fff;
+  animation: fade-in 1s ease-out both;
+  padding: 40px;
+}
+
+.landing-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.landing-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.skip-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: #fff;
+  color: #0d47a1;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.skip-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- EXPLORE PAGE HERO (form.html) ---------- */
+.explore-hero {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.explore-content h2 {
+  font-size: 2.5rem;
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.explore-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.explore-buttons a {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 12px 24px;
+  background: #1976d2;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.explore-buttons a:hover {
+  transform: translateY(-3px);
+  background: #0d47a1;
+}
+
+/* ---------- VIRTUAL HUG PAGE ---------- */
+.hug-hero {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
+  padding: 40px 20px;
+}
+
+.hug-content h2 {
+  font-size: 2.2rem;
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+#hug-message {
+  font-size: 1.2rem;
+  color: #0d47a1;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* ---------- GLOBAL ANIMATIONS ---------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-delay-1 { animation-delay: 0.2s; }
+.fade-delay-2 { animation-delay: 0.4s; }
+.fade-delay-3 { animation-delay: 0.6s; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  section {
+    margin: 10px;
+  }
+  .hug-image-container img {
+    max-width: 90%;
+  }
+}
+@keyframes hugPop {
+  0%   { transform: scale(0.8); opacity: 0; }
+  60%  { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1);   }
+}
+
+.hug-pop {
+  animation: hugPop 0.7s ease-out;
+}
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.nav-buttons button:hover {
+  background-color: #45a049;
+}
+.user-story {
+  margin-top: 40px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.user-story textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.user-story button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4ca8e4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.user-story button:hover {
+  background-color: #328cd1;
+}
+
+
+
+
+

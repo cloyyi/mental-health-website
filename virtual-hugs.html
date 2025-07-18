@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virtual Hugs</title>
+
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- minimal page‑specific styles -->
+  <style>
+    @keyframes pop {
+      0%   { transform: scale(0.9); opacity: 0.4; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .hug-pop {
+      animation: pop 0.5s ease-out;
+    }
+
+    .hug-options button {
+      margin: 10px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      background: #1976d2;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .hug-options button:hover {
+      transform: scale(1.05);
+      background: #0d47a1;
+    }
+
+    .hug-image-container img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Choose Your Virtual Hug 🤗</h1>
+    <nav>
+      <ul style="list-style: none; display: flex; justify-content: center; gap: 20px; padding: 10px;">
+        <li><a href="college.html">Home</a></li>
+        <li><a href="story.html">Stories</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN HUG AREA ===== -->
+  <main style="text-align: center; padding: 40px 20px;">
+    <h2>Select your favourite animal 💞</h2>
+
+    <div class="hug-options">
+      <button onclick="showHug('panda')">🐼 Panda</button>
+      <button onclick="showHug('dog')">🐶 Dog</button>
+      <button onclick="showHug('cat')">🐱 Cat</button>
+      <button onclick="showHug('koala')">🐨 Koala</button>
+      <button onclick="showHug('bunny')">🐰 Bunny</button>
+    </div>
+
+    <div class="hug-image-container">
+      <img id="hug-image"
+           src="https://media1.giphy.com/media/yYSSBtDgbbRzq/giphy.gif"
+           alt="hug">
+    </div>
+
+    <p id="hug-message">Here’s a warm panda hug just for you 🐼💙</p>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Virtual Hug Center | You are not alone 💙</p>
+  </footer>
+
+  <!-- ===== SCRIPT ===== -->
+  <script>
+    const img = document.getElementById('hug-image');
+    const msg = document.getElementById('hug-message');
+
+    const HUG_DATA = {
+      panda : { url:'https://media1.giphy.com/media/yYSSBtDgbbRzq/giphy.gif',
+                txt:'Here’s a warm panda hug just for you 🐼💙' },
+      dog   : { url:'https://media.tenor.com/C6nwnvZn0AwAAAAC/puppy-love.gif',
+                txt:'A fluffy puppy hug coming your way 🐶🤗' },
+      cat   : { url:'https://media.tenor.com/g7uG_3HZVasAAAAC/cat-hug.gif',
+                txt:'Soft kitty cuddles just for you 🐱💞' },
+      koala : { url:'https://media.tenor.com/UlHBz9ldZ1cAAAAC/koala.gif',
+                txt:'Here’s a sweet koala hug 🐨💗' },
+      bunny : { url:'https://media.tenor.com/nxP1MfZ4RoYAAAAC/bunny-hug.gif',
+                txt:'Bunny hugs coming your way 🐰🌸' }
+    };
+
+    function showHug(animal){
+      const { url, txt } = HUG_DATA[animal];
+      img.src = url;
+      img.alt = animal + ' hug';
+      msg.textContent = txt;
+
+      img.classList.remove('hug-pop');
+      void img.offsetWidth;
+      img.classList.add('hug-pop');
+    }
+  </script>
+</body>
+</html>
+
+
+
